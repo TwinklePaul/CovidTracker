@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".screens.about.AboutFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ColorWhite"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/myToolbar"
+            style="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="About Us"
+            app:titleMarginStart="30dp"
+            app:titleTextColor="@color/ColorWhite" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/kunal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:padding="10dp"
+                    app:cardCornerRadius="5dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/ColorWhite">
+
+                        <TextView
+                            android:id="@+id/tagName2"
+                            style="@style/tagStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="15dp"
+                            android:text="Name: "
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/canditateName2"
+                            style="@style/valueStyle"
+                            android:text="Kunal Das"
+                            android:textColor="@color/color_three"
+                            app:layout_constraintBottom_toBottomOf="@+id/tagName2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/valRoll2"
+                            app:layout_constraintTop_toTopOf="@+id/tagName2" />
+
+                        <View
+                            android:id="@+id/view42"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/canditateName2" />
+
+                        <TextView
+                            android:id="@+id/tagRoll2"
+                            style="@style/tagStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Roll No.: "
+                            app:layout_constraintStart_toStartOf="@+id/tagName2"
+                            app:layout_constraintTop_toTopOf="@+id/view42" />
+
+                        <TextView
+                            android:id="@+id/valRoll2"
+                            style="@style/valueStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BWU/BTS/17/087"
+                            android:textColor="@color/color_three"
+                            app:layout_constraintBottom_toBottomOf="@+id/tagRoll2"
+                            app:layout_constraintStart_toStartOf="@+id/valDept2"
+                            app:layout_constraintTop_toTopOf="@+id/tagRoll2" />
+
+                        <View
+                            android:id="@+id/view52"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/valRoll2" />
+
+                        <TextView
+                            android:id="@+id/tagDept2"
+                            style="@style/tagStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Department:"
+                            app:layout_constraintStart_toStartOf="@+id/tagRoll2"
+                            app:layout_constraintTop_toBottomOf="@+id/view52" />
+
+                        <TextView
+                            android:id="@+id/valDept2"
+                            style="@style/valueStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:text="B.Tech CSE"
+                            android:textColor="@color/color_three"
+                            app:layout_constraintBottom_toBottomOf="@+id/tagDept2"
+                            app:layout_constraintStart_toEndOf="@+id/tagDept2"
+                            app:layout_constraintTop_toTopOf="@+id/tagDept2" />
+
+                        <View
+                            android:id="@+id/view62"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/valDept2" />
+
+                        <TextView
+                            android:id="@+id/tagSem2"
+                            style="@style/tagStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Semester:"
+                            app:layout_constraintStart_toStartOf="@+id/tagDept2"
+                            app:layout_constraintTop_toBottomOf="@+id/view62" />
+
+                        <TextView
+                            android:id="@+id/valSem2"
+                            style="@style/valueStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="6"
+                            android:textColor="@color/color_three"
+                            app:layout_constraintBottom_toBottomOf="@+id/tagSem2"
+                            app:layout_constraintStart_toStartOf="@+id/valDept2"
+                            app:layout_constraintTop_toTopOf="@+id/tagSem2" />
+
+                        <View
+                            android:id="@+id/view72"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tagSem2" />
+
+                        <TextView
+                            android:id="@+id/tagRole2"
+                            style="@style/tagStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Role:"
+                            app:layout_constraintStart_toStartOf="@+id/tagSem2"
+                            app:layout_constraintTop_toBottomOf="@+id/view72" />
+
+                        <TextView
+                            android:id="@+id/valRole21"
+                            style="@style/valueStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Project Idea,"
+                            android:textColor="@color/color_three"
+                            app:layout_constraintStart_toStartOf="@+id/valSem2"
+                            app:layout_constraintTop_toTopOf="@+id/tagRole2" />
+
+                        <TextView
+                            android:id="@+id/valRole22"
+                            style="@style/valueStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="App Designing,"
+                            android:textColor="@color/color_three"
+                            app:layout_constraintStart_toStartOf="@+id/valRole21"
+                            app:layout_constraintTop_toBottomOf="@+id/valRole21" />
+
+                        <TextView
+                            android:id="@+id/valRole23"
+                            style="@style/valueStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="App Development"
+                            android:textColor="@color/color_three"
+                            app:layout_constraintStart_toStartOf="@+id/valRole22"
+                            app:layout_constraintTop_toBottomOf="@+id/valRole22" />
+
+                        <TextView
+                            android:id="@+id/valRole24"
+                            style="@style/valueStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Documentation"
+                            android:textColor="@color/color_three"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/valRole23"
+                            app:layout_constraintTop_toBottomOf="@+id/valRole23" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/twinkle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:padding="10dp"
+                    app:cardCornerRadius="5dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/ColorWhite">
+
+                        <TextView
+                            android:id="@+id/tagName1"
+                            style="@style/tagStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="15dp"
+                            android:text="Name: "
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/canditateName1"
+                            style="@style/valueStyle"
+                            android:text="Twinkle Paul"
+                            android:textColor="@color/active"
+                            app:layout_constraintBottom_toBottomOf="@+id/tagName1"
+                            app:layout_constraintStart_toStartOf="@+id/valRoll1"
+                            app:layout_constraintTop_toTopOf="@+id/tagName1" />
+
+                        <View
+                            android:id="@+id/view4"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/canditateName1" />
+
+                        <TextView
+                            android:id="@+id/tagRoll"
+                            style="@style/tagStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Roll No.: "
+                            app:layout_constraintStart_toStartOf="@+id/tagName1"
+                            app:layout_constraintTop_toTopOf="@+id/view4" />
+
+                        <TextView
+                            android:id="@+id/valRoll1"
+                            style="@style/valueStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BWU/BTS/17/063"
+                            android:textColor="@color/active"
+                            app:layout_constraintBottom_toBottomOf="@+id/tagRoll"
+                            app:layout_constraintStart_toStartOf="@+id/valDept"
+                            app:layout_constraintTop_toTopOf="@+id/tagRoll" />
+
+                        <View
+                            android:id="@+id/view5"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/valRoll1" />
+
+                        <TextView
+                            android:id="@+id/tagDept"
+                            style="@style/tagStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Department:"
+                            app:layout_constraintStart_toStartOf="@+id/tagRoll"
+                            app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+                        <TextView
+                            android:id="@+id/valDept"
+                            style="@style/valueStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:text="B.Tech CSE"
+                            android:textColor="@color/active"
+                            app:layout_constraintBottom_toBottomOf="@+id/tagDept"
+                            app:layout_constraintStart_toEndOf="@+id/tagDept"
+                            app:layout_constraintTop_toTopOf="@+id/tagDept" />
+
+                        <View
+                            android:id="@+id/view6"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/valDept" />
+
+                        <TextView
+                            android:id="@+id/tagSem1"
+                            style="@style/tagStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Semester:"
+                            app:layout_constraintStart_toStartOf="@+id/tagDept"
+                            app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+                        <TextView
+                            android:id="@+id/valSem1"
+                            style="@style/valueStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="6"
+                            android:textColor="@color/active"
+                            app:layout_constraintBottom_toBottomOf="@+id/tagSem1"
+                            app:layout_constraintStart_toStartOf="@+id/valDept"
+                            app:layout_constraintTop_toTopOf="@+id/tagSem1" />
+
+                        <View
+                            android:id="@+id/view7"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tagSem1" />
+
+                        <TextView
+                            android:id="@+id/tagRole1"
+                            style="@style/tagStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Role:"
+                            app:layout_constraintStart_toStartOf="@+id/tagSem1"
+                            app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+                        <TextView
+                            android:id="@+id/valRole11"
+                            style="@style/valueStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="App Development,"
+                            android:textColor="@color/active"
+                            app:layout_constraintStart_toStartOf="@+id/valSem1"
+                            app:layout_constraintTop_toTopOf="@+id/tagRole1" />
+
+                        <TextView
+                            android:id="@+id/valRole12"
+                            style="@style/valueStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Code Optimization, "
+                            android:textColor="@color/active"
+                            app:layout_constraintStart_toStartOf="@+id/textView4"
+                            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                        <TextView
+                            android:id="@+id/valRole14"
+                            style="@style/valueStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Maintenance,"
+                            android:textColor="@color/active"
+                            app:layout_constraintStart_toStartOf="@+id/valRole13"
+                            app:layout_constraintTop_toBottomOf="@+id/valRole13" />
+
+                        <TextView
+                            android:id="@+id/valRole13"
+                            style="@style/valueStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Layout Restructuring"
+                            android:textColor="@color/active"
+                            app:layout_constraintStart_toStartOf="@+id/valRole12"
+                            app:layout_constraintTop_toBottomOf="@+id/valRole12" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            style="@style/valueStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Documentation"
+                            android:textColor="@color/active"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/valRole14"
+                            app:layout_constraintTop_toBottomOf="@+id/valRole14" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            style="@style/valueStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Icon Design,"
+                            android:textColor="@color/active"
+                            app:layout_constraintStart_toStartOf="@+id/valRole11"
+                            app:layout_constraintTop_toBottomOf="@+id/valRole11" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/satwika"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:padding="10dp"
+                    app:cardCornerRadius="5dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/ColorWhite">
+
+                        <TextView
+                            android:id="@+id/tagName3"
+                            style="@style/tagStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="15dp"
+                            android:text="Name: "
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/canditateName3"
+                            style="@style/valueStyle"
+                            android:text="Satwika Nayak"
+                            android:textColor="@color/color_one"
+                            app:layout_constraintBottom_toBottomOf="@+id/tagName3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/valRoll3"
+                            app:layout_constraintTop_toTopOf="@+id/tagName3" />
+
+                        <View
+                            android:id="@+id/view43"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/canditateName3" />
+
+                        <TextView
+                            android:id="@+id/tagRoll3"
+                            style="@style/tagStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Roll No.: "
+                            app:layout_constraintStart_toStartOf="@+id/tagName3"
+                            app:layout_constraintTop_toTopOf="@+id/view43" />
+
+                        <TextView
+                            android:id="@+id/valRoll3"
+                            style="@style/valueStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BWU/BTS/17/062"
+                            android:textColor="@color/color_one"
+                            app:layout_constraintBottom_toBottomOf="@+id/tagRoll3"
+                            app:layout_constraintStart_toStartOf="@+id/valDept3"
+                            app:layout_constraintTop_toTopOf="@+id/tagRoll3" />
+
+                        <View
+                            android:id="@+id/view53"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/valRoll3" />
+
+                        <TextView
+                            android:id="@+id/tagDept3"
+                            style="@style/tagStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Department:"
+                            app:layout_constraintStart_toStartOf="@+id/tagRoll3"
+                            app:layout_constraintTop_toBottomOf="@+id/view53" />
+
+                        <TextView
+                            android:id="@+id/valDept3"
+                            style="@style/valueStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:text="B.Tech CSE"
+                            android:textColor="@color/color_one"
+                            app:layout_constraintBottom_toBottomOf="@+id/tagDept3"
+                            app:layout_constraintStart_toEndOf="@+id/tagDept3"
+                            app:layout_constraintTop_toTopOf="@+id/tagDept3" />
+
+                        <View
+                            android:id="@+id/view63"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/valDept3" />
+
+                        <TextView
+                            android:id="@+id/tagSem3"
+                            style="@style/tagStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Semester:"
+                            app:layout_constraintStart_toStartOf="@+id/tagDept3"
+                            app:layout_constraintTop_toBottomOf="@+id/view63" />
+
+                        <TextView
+                            android:id="@+id/valSem3"
+                            style="@style/valueStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="6"
+                            android:textColor="@color/color_one"
+                            app:layout_constraintBottom_toBottomOf="@+id/tagSem3"
+                            app:layout_constraintStart_toStartOf="@+id/valDept3"
+                            app:layout_constraintTop_toTopOf="@+id/tagSem3" />
+
+                        <View
+                            android:id="@+id/view8"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tagSem3" />
+
+                        <TextView
+                            android:id="@+id/tagRole3"
+                            style="@style/tagStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="Role:"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/tagSem3"
+                            app:layout_constraintTop_toTopOf="@+id/view8" />
+
+                        <TextView
+                            android:id="@+id/valRole3"
+                            style="@style/valueStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Project Documentation"
+                            android:textColor="@color/color_one"
+                            app:layout_constraintBottom_toBottomOf="@+id/tagRole3"
+                            app:layout_constraintStart_toStartOf="@+id/valSem3"
+                            app:layout_constraintTop_toTopOf="@+id/tagRole3" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

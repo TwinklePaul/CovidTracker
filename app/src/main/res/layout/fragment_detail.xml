@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FragmentDetail.FragmentDetail">
+
+    <data>
+
+        <variable
+            name="detailViewModel"
+            type="com.project.android.covid19_trackerapp.screens.details.DetailViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_header_doctor" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_titleCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Country Statistics"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/border_titleStatistics"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/color_two"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/countryName" />
+
+                <TextView
+                    android:id="@+id/text_Cases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Cases"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/border_titleStatistics" />
+
+                <TextView
+                    android:id="@+id/num_Cases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="0"
+                    android:textColor="@color/color_one"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/border_Cases"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/border_titleStatistics" />
+
+                <View
+                    android:id="@+id/border_Cases"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/color_two"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_Cases" />
+
+                <TextView
+                    android:id="@+id/text_todayCases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Today's Cases"
+                    app:layout_constraintStart_toStartOf="@+id/text_Cases"
+                    app:layout_constraintTop_toTopOf="@+id/border_Cases" />
+
+                <TextView
+                    android:id="@+id/num_todayCases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="0"
+                    android:textColor="@color/color_one"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/num_Cases"
+                    app:layout_constraintTop_toTopOf="@+id/border_Cases" />
+
+                <View
+                    android:id="@+id/border_todayCases"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/color_two"
+                    app:layout_constraintTop_toBottomOf="@+id/text_todayCases" />
+
+                <TextView
+                    android:id="@+id/text_deaths"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Deaths"
+                    app:layout_constraintStart_toStartOf="@+id/text_todayCases"
+                    app:layout_constraintTop_toTopOf="@+id/border_todayCases" />
+
+                <TextView
+                    android:id="@+id/num_deaths"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="0"
+                    android:textColor="@color/color_one"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/num_todayCases"
+                    app:layout_constraintTop_toTopOf="@+id/border_todayCases" />
+
+                <View
+                    android:id="@+id/border_deaths"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/color_two"
+                    app:layout_constraintTop_toBottomOf="@+id/text_deaths" />
+
+                <TextView
+                    android:id="@+id/text_Recovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Recovered"
+                    app:layout_constraintStart_toStartOf="@+id/text_todayDeaths"
+                    app:layout_constraintTop_toBottomOf="@+id/border_todayDeaths" />
+
+                <TextView
+                    android:id="@+id/num_Recovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="0"
+                    android:textColor="@color/color_one"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/border_Recovered"
+                    app:layout_constraintEnd_toEndOf="@+id/num_todayDeath"
+                    app:layout_constraintTop_toBottomOf="@+id/border_todayDeaths" />
+
+                <View
+                    android:id="@+id/border_Recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/color_two"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_Recovered" />
+
+                <TextView
+                    android:id="@+id/text_Critical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Critical"
+                    app:layout_constraintStart_toStartOf="@+id/text_Recovered"
+                    app:layout_constraintTop_toBottomOf="@+id/border_Recovered" />
+
+                <TextView
+                    android:id="@+id/num_Critical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="0"
+                    android:textColor="@color/color_one"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/border_Critical"
+                    app:layout_constraintEnd_toEndOf="@+id/num_Recovered"
+                    app:layout_constraintTop_toBottomOf="@+id/border_Recovered" />
+
+                <View
+                    android:id="@+id/border_Critical"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/color_two"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_Critical" />
+
+                <TextView
+                    android:id="@+id/text_Active"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Active"
+                    app:layout_constraintStart_toStartOf="@+id/text_Critical"
+                    app:layout_constraintTop_toBottomOf="@+id/border_Critical" />
+
+                <TextView
+                    android:id="@+id/num_active"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="0"
+                    android:textColor="@color/color_one"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/border_Active"
+                    app:layout_constraintEnd_toEndOf="@+id/num_Critical"
+                    app:layout_constraintTop_toBottomOf="@+id/border_Critical" />
+
+                <View
+                    android:id="@+id/border_Active"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/color_two"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_Active" />
+
+
+                <TextView
+                    android:id="@+id/text_todayDeaths"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Today's Deaths"
+                    app:layout_constraintStart_toStartOf="@+id/text_deaths"
+                    app:layout_constraintTop_toBottomOf="@+id/border_deaths" />
+
+                <TextView
+                    android:id="@+id/num_todayDeath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="0"
+                    android:textColor="@color/color_one"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/border_todayDeaths"
+                    app:layout_constraintEnd_toEndOf="@+id/num_deaths"
+                    app:layout_constraintTop_toBottomOf="@+id/border_deaths" />
+
+                <View
+                    android:id="@+id/border_todayDeaths"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/color_two"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_todayDeaths" />
+
+                <TextView
+                    android:id="@+id/countryName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Country"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_one"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_titleCountry" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
